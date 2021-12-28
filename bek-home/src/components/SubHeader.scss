@@ -1,0 +1,23 @@
+.subHeader {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid white;
+
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 25px 0 25px;
+      .list_item_links {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
