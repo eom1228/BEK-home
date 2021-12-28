@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 40px 80px 0px 80px;
+  .header_wrapper {
+    display: flex;
+    width: 100%;
+    .header_logo {
+      flex: 1;
+      height: 100%; 
+      display: flex; 
+      align-items: flex-end;
+      .header_logo_link {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        line-height: 4;
+        font-size: 20px; 
+      }
+    }
+    .header_projects {
+      display: flex;
+      align-items: center; 
+      height: 100%; 
+      .nav_projects_container {
+        margin: 0 25px 0 25px;
+        .subnav_links {
+          display: flex;
+          text-decoration: none;
+          color: white;
+          line-height: 4;
+          font-size: 20px; 
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }   
+    }
+    .nav_third_element {
+      flex: 1; 
+      height: 100%; 
+      display: flex; 
+      align-items: flex-end;
+    }
+    .nav_projects-subContainer {
+      display: flex;
+    }
+    li:last-child {
+      margin: 0;
+    }
+  }
+}
