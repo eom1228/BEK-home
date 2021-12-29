@@ -1,19 +1,34 @@
 import React from 'react';
+import GalleryElement from './GalleryElement';
+import './gallery.scss';
 // import {ReactComponent as sample} from 'sample.jpeg';
+
+import '.'
 
 function Gallery() {
     return (
-        <div class="gallery-card">
-            <a href="#" class="gallery-link">
-                <div class="gallery-image" >
-                    <img src="hi.jpg" alt="Gallery" />
-                </div>
-                <div class="gallery-image-title">
-                    <div class="gallery-title">
-                        <span>Numbers of Sample</span>
-                    </div>
-                </div>
-            </a>
+        <div class="gallery">
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        <GalleryElement />
+        
         </div>
     )
 };
