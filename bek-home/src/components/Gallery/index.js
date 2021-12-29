@@ -1,12 +1,13 @@
 import React from 'react';
 import GalleryElement from './GalleryElement';
 import './gallery.scss';
-// import {ReactComponent as sample} from 'sample.jpeg';
+
 
 import '.'
 
 function Gallery() {
     return (
+        <div class="container">
         <div class="gallery">
         <GalleryElement />
         <GalleryElement />
@@ -29,6 +30,7 @@ function Gallery() {
         <GalleryElement />
         <GalleryElement />
         
+        </div>
         </div>
     )
 };

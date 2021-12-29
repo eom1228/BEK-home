@@ -1,9 +1,19 @@
 
-<<<<<<< HEAD
-=======
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.container{
+  max-width:100%;
+  margin:0 auto;
+  padding:0 20px; 
+}
+@media(min-width:768px){
+  .container{
+  max-width:90%;
+
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
