@@ -1,0 +1,12 @@
+.footer_container {
+  width: 100%;
+  .footer_content_padding {
+    padding-bottom: 30px;
+    .footer_content {
+      text-align: center;
+      color: gray;
+      border-top: 1px solid gray;
+      padding: 10px;
+    }
+  }
+}

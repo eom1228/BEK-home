@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import './AboutPage.scss';
+import sampleImg from '../images/fnt_sampleImg.jpeg';
 
 const AboutPage = () => {
   return (
@@ -30,9 +31,13 @@ const AboutPage = () => {
                     arts events, and many others in various fields, sizes and
                     media.
                   </p>
-                  {/* <div>
-                    <img src='/images/fnt_sampleImg.jpeg'></img>
-                  </div>  */}
+                  <div className='main_item_photoBox'>
+                    <img
+                      src={sampleImg}
+                      // style={{ width: '80%', height: 'auto' }}
+                      alt='SampleImg'
+                    ></img>
+                  </div>
                 </Grid>
                 <Grid
                   className='main_grid_item'
