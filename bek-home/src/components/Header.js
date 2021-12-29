@@ -20,58 +20,34 @@ const Header = ({ location, history }) => {
               Logo
             </Link>
           </div>
-          <ul>
-            {/* <li>
-              <Link to='/' className='subnav_links'>
-                Logo
-              </Link>
-            </li> */}
+          <ul className='header_projects'>
             <li className='nav_projects_container'>
               <Link to='/projects' className='subnav_links'>
                 Projects
               </Link>
             </li>
 
-            <li className='nav_projects_container'>
+            <li className='nav_projects_container' onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}>
               <Link
                 to='/about'
                 className='subnav_links'
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
               >
                 About
               </Link>
             </li>
-            <li>
+            <li className='nav_projects_container'>
               <Link to='/contact' className='subnav_links'>
                 Contact
               </Link>
             </li>
           </ul>
-          {/* <li className='nav_projects-subContainer'> */}
-          {/* {!isShown && (
-        <ul className='subnav_projects'>
-          <li className='subnav_list_items'>
-            <BrandingBtn />
-          </li>
-          <li className='subnav_list_items'>
-            <MarketingBtn />
-          </li>
-          <li className='subnav_list_items'>
-            <MediaBtn />
-          </li>
-          <li className='subnav_list_items'>
-            <PhotographyBtn />
-          </li>
-          <li className='subnav_list_items'>
-            <DevelopmentBtn />
-          </li>
-        </ul>
-      )} */}
-          {/* </li> */}
+          <div className='nav_third_element'>
+
+          </div>
         </div>
       </header>
-      {!isShown && <SubHeader isShown={isShown} />}
+      {isShown && <SubHeader isShown={isShown} setIsShown={setIsShown} />}
     </>
   );
 };

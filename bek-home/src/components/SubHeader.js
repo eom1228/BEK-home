@@ -6,12 +6,14 @@ import PhotographyBtn from './AboutPage/photographyBtn';
 import DevelopmentBtn from './AboutPage/developmentBtn';
 import './SubHeader.scss';
 import { Link } from 'react-router-dom';
-const SubHeader = ({ isShown }) => {
+const SubHeader = ({ isShown, setIsShown }) => {
   return (
     <>
       {/* {isShown && ( */}
-      <header className='subHeader'>
-        <ul className='subnav_projects'>
+      <header className='subHeader' onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}>
+        <ul className='subnav_projects'
+        >
           <li className='subnav_list_items'>
             {/* <BrandingBtn /> */}
             <Link to='/about/branding' className='list_item_links'>

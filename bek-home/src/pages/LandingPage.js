@@ -5,9 +5,7 @@ import Footer from '../components/Footer';
 const LandingPage = () => {
   return (
     <>
-      <Header />
       <div>LandingPage</div>
-      <Footer />
     </>
   );
 };
