@@ -1,7 +1,7 @@
-$layout-smallest:576px;
-$layout-small:768px;
-$layout-medium:992px;
-$layout-large:1200px; 
+$layout-smallest: 576px;
+$layout-small: 768px;
+$layout-medium: 992px;
+$layout-large: 1200px;
 
 .gallery {
     column-count: 1;
@@ -12,44 +12,42 @@ $layout-large:1200px;
     }
 
     &__link {
-        text-decoration: none;
+        display: inline-flex;
+        flex-flow: column wrap;
         position: relative;
+        margin-bottom: 1em;
+        text-decoration: none;
         transition: 1000ms ease-in-out;
         &--image {
             position: relative;
-            height:250px;
+            height: 250px;
             margin-bottom: 1em;
             & .overlay {
-                background: rgba(0,0,0,0.3);
+                background: rgba(0, 0, 0, 0.3);
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 visibility: hidden;
-               
             }
-            & img{
+            & img {
                 width: 100%;
                 height: 100%;
-                margin-bottom: 1rem;
+
                 object-fit: contain;
-                background-color: rgba(255,255,255,0.2);
+                background-color: rgba(255, 255, 255, 0.2);
+                vertical-align: middle;
             }
-            
-            
         }
-        
+
         &:hover {
             transition: 1000ms ease-in-out;
             & .overlay {
                 visibility: visible;
-               
             }
             &--image {
-                
-
-                & img{
-                animation-name: example;
-                animation-duration:500ms;
+                & img {
+                    animation-name: example;
+                    animation-duration: 500ms;
                 }
             }
             span {
@@ -57,27 +55,23 @@ $layout-large:1200px;
             }
         }
     }
-    @media(min-width: $layout-smallest){
-        
+    @media (min-width: $layout-smallest) {
         column-count: 3;
         column-fill: balance;
-        column-gap: .3em;
-
-       
-        
+        column-gap: 0.3em;
     }
-    @media(min-width: $layout-medium){
-        
+    @media (min-width: $layout-medium) {
         column-count: 5;
         column-fill: balance;
-        column-gap: .5em;
-        
+        column-gap: 0.5em;
     }
-   
 }
 
-
 @keyframes example {
-  from {opacity:0.5;}
-  to {opacity:1;}
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
 }

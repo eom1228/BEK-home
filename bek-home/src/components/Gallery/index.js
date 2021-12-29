@@ -8,29 +8,7 @@ import '.'
 function Gallery() {
     return (
         <div class="container">
-        <div class="gallery">
         <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        <GalleryElement />
-        
-        </div>
         </div>
     )
 };
