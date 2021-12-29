@@ -27,12 +27,12 @@ const Header = ({ location, history }) => {
               </Link>
             </li>
 
-            <li className='nav_projects_container' onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}>
-              <Link
-                to='/about'
-                className='subnav_links'
-              >
+            <li
+              className='nav_projects_container'
+              onMouseEnter={() => setIsShown(true)}
+              onMouseLeave={() => setIsShown(false)}
+            >
+              <Link to='/about' className='subnav_links'>
                 About
               </Link>
             </li>
@@ -43,11 +43,18 @@ const Header = ({ location, history }) => {
             </li>
           </ul>
           <div className='nav_third_element'>
-
+            {/* <div style={{ width: '80px' }}></div> */}
           </div>
         </div>
       </header>
-      {isShown && <SubHeader isShown={isShown} setIsShown={setIsShown} />}
+      {isShown ? (
+        <SubHeader isShown={isShown} setIsShown={setIsShown} />
+      ) : (
+        <div
+          className='empty_container'
+          style={{ height: '40px', width: '100%' }}
+        ></div>
+      )}
     </>
   );
 };
