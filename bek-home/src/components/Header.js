@@ -8,7 +8,7 @@ import PhotographyBtn from './AboutPage/photographyBtn';
 import './Header.scss';
 import SubHeader from './SubHeader';
 
-const Header = ({ location, history }) => {
+const Header = ({ location, history, handleClick, categories }) => {
   const [isShown, setIsShown] = useState(false);
 
   return (
@@ -22,7 +22,12 @@ const Header = ({ location, history }) => {
           </div>
           <ul className='header_projects'>
             <li className='nav_projects_container'>
-              <Link to='/projects' className='subnav_links'>
+              <Link
+                to='/projects'
+                value='projects'
+                className='subnav_links'
+                onClick={(e) => handleClick(e.target.value)}
+              >
                 Projects
               </Link>
             </li>
