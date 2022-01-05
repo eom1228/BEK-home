@@ -9,11 +9,11 @@ import GalleryDesignList from '../components/Gallery/GalleryDesignList';
 import GalleryDevelopmentList from '../components/Gallery/GalleryDevelopmentList';
 import GalleryElement from '../components/Gallery/GalleryElement';
 
-const ProjectsPage = ({ handleClick, categories }) => {
+const ProjectsPage = ({ handleClick, categories, projects }) => {
   return (
     <>
       {/* <GalleryNavbar /> */}
-      <Gallery handleClick={handleClick} categories={categories}></Gallery>
+      <Gallery projectsy={projects} handleClick={handleClick} categories={categories}></Gallery>
       {/* <Routes>
         <Route
           path='/'

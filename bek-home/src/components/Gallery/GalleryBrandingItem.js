@@ -1,105 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
-import {
-  GalleryItemList,
-  GalleryItems,
-  GalleryItemsTwo,
-  GalleryItemsThree,
-  GalleryItemsFour,
-  GalleryItemsFive,
-} from './Gallery';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import GalleryNavbar from './GalleryNavbar';
+
 const GalleryBrandingItem = ({
   categories,
-  project,
-  handleClickBrand,
-  projectClicked,
+  handleClick
 }) => {
-  const location = useLocation();
-  // const [categories, setCategories] = useState([
-  //   {
-  //     id: 1,
-  //     name: 'Branding',
-  //     clicked: false,
-  //     projects: [...GalleryItems],
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Marketing',
-  //     clicked: false,
-  //     projects: [...GalleryItemsTwo],
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Design',
-  //     clicked: false,
-  //     projects: [...GalleryItemsThree],
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'Photography',
-  //     clicked: false,
-  //     projects: [...GalleryItemsFour],
-  //   },
-  //   {
-  //     id: 5,
-  //     name: 'Development',
-  //     clicked: false,
-  //     projects: [...GalleryItemsFive],
-  //   },
-  // ]);
-  let { id } = useParams();
-  // id = project.id;
+  
+  let {id} = useParams();
 
-  const projectItem = categories[0].projects.find((el) => el.id === id);
-  console.log(id);
-  // useEffect(() => {
-  //   handleClickBrand();
-  // }, [branding_id]);
-  let matchedItems = categories[0].projects.find((matchedItem) => {
-    if (matchedItem.id === id) return true;
-  });
-  // console.log(matchedItems);
+  const matchedItem= categories[0].projects.find((project) => String(project.id) === id)
+  
+  console.log(matchedItem)
+  console.log(categories[0].projects.find((project) => String(project.id) === id));
 
   return (
     <>
-      {/* <div className='gallery'>
-        <div
-          className='brand_item_section'
-          style={{ background: 'blue', height: '500px' }}
-        >
-          {console.log(matchedItems.title)}
-          <div className='brand_item_title'>{matchedItems.title}</div>
-          <div className='brand_item_image'>
-            <img src={matchedItems.imageURL} alt='Brand_item_img' />
-          </div>
-          <div>hi</div>
-        </div>
-      </div> */}
-
-      {console.log(matchedItems)}
-      {projectItem && (
-        <div className='gallery__card'>
-          {/* <Outlet /> */}
-          <div className='gallery__link'>
-            <div className='gallery__link--image'>
+      
+      {matchedItem ? (
+        <div class='container' style={{marginTop: '50px'}}>
+          <GalleryNavbar categories={categories} handleClick={handleClick}/>
+          <div className='galleryItem__card'>
+            {/* <Outlet /> */}
+            <div className='galleryItem__title'>
+              <h2>{matchedItem.title}</h2>
+            </div>
+            <div className='galleryItem__description'>
+              <h3>{matchedItem.description}</h3>
+            </div>
+            <div className='galleryItem__image'>
               <div className='overlay'></div>
-              <img src={projectItem.imageURL} alt='Gallery' />
-            </div>
-            <div className='gallery__link-title'>
-              <span>{projectItem.title}</span>
+              <img src={matchedItem.imageURL} alt='GalleryItem' />
             </div>
           </div>
         </div>
-      )}
+      ) 
+      :
+      <div>Loading...</div>}
     </>
   );
-
-  // else {
-  //   return <div>{console.log(branding_id)}Loading3...</div>;
-  // }
-  // } else {
-  //   return <div>Loading...</div>;
-  // }
 };
 
 export default GalleryBrandingItem;
