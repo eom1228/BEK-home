@@ -27,11 +27,17 @@ import {
 } from '../src/components/Gallery/Gallery';
 import Gallery from '../src/components/Gallery/index';
 import GalleryBrandingItem from './components/Gallery/GalleryBrandingItem';
+import GalleryDesignItem from './components/Gallery/GalleryDesignItem';
+import GalleryMarketingItem from './components/Gallery/GalleryMarketingItem';
+import GalleryPhotographyItem from './components/Gallery/GalleryPhotographyItem';
+import GalleryDevelopmentItem from './components/Gallery/GalleryDevelopmentItem';
 import GalleryTest from './components/Gallery/GalleryTest';
 import GalleryElement from './components/Gallery/GalleryElement';
 import Layout from './pages/Layout';
 
+
 function App() {
+  const [projects, setProjects] = useState([...GalleryItemList]);
   const [categories, setCategories] = useState([
     {
       id: 1,
@@ -105,24 +111,41 @@ function App() {
             {/* <Route path='*' element={<Gallery />}> */}
             {/* <Route index element={<GalleryElement categories={categories} />} /> */}
             {/* <Route path='*' element={<Gallery categories={categories} />} /> */}
-
+           
             <Route
-              path='/projects/Branding'
+              path='/projects/Branding/*'
               element={<GalleryBrandingList categories={categories} />}
             >
               {/* <Route path=':branding_id' element={<GalleryBrandingItem />} /> */}
+              
             </Route>
-            <Route
-              path='/projects/Branding/:id'
-              element={<GalleryBrandingItem categories={categories} />}
-            />
-            <Route path='Marketing' element={<GalleryMarketingList />} />
+           
+            <Route path='Marketing/*' element={<GalleryMarketingList />} />
             <Route path='Design' element={<GalleryDesignList />} />
             <Route path='Photography' element={<GalleryPhotographyList />} />
             <Route path='Development' element={<GalleryDevelopmentList />} />
             {/* </Route> */}
           </Route>
-
+          <Route
+              path='/projects/Branding/:id'
+              element={<GalleryBrandingItem handleClick={handleClick} projects={projects} categories={categories} />}
+            />
+          <Route
+            path='/projects/Marketing/:id'
+            element={<GalleryMarketingItem handleClick={handleClick} projects={projects} categories={categories} />}
+          />
+          <Route
+            path='/projects/Design/:id'
+            element={<GalleryDesignItem handleClick={handleClick} projects={projects} categories={categories} />}
+          />
+          <Route
+            path='/projects/Photography/:id'
+            element={<GalleryPhotographyItem handleClick={handleClick} projects={projects} categories={categories} />}
+          />
+          <Route
+            path='/projects/Development/:id'
+            element={<GalleryDevelopmentItem handleClick={handleClick} projects={projects} categories={categories} />}
+          />
           {/* <Route
           path='/projects'
           element={
@@ -131,7 +154,7 @@ function App() {
         >
           
           <Route
-            path='/projects/Branding/*'
+            path='/projects/Design/*'
             element={<GalleryBrandingList categories={categories} />}
           >
              

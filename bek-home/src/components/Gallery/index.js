@@ -14,7 +14,7 @@ import './gallery.scss';
 
 import '.';
 
-function Gallery({ handleClick, categories }) {
+function Gallery({ handleClick, categories, projectsy }) {
   const [projects, setProjects] = useState([...GalleryItemList]);
   // const [categories, setCategories] = useState([
   //   {
@@ -67,7 +67,7 @@ function Gallery({ handleClick, categories }) {
   // };
 
   return (
-    <div class='container'>
+    <div class='container' style={{marginTop: '50px'}}>
       <GalleryNavbar
         categories={categories}
         projects={projects}

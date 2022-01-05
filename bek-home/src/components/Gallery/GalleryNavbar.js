@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import './GalleryNavbar.scss';
 
 const GalleryNavbar = ({ categories, handleClick }) => {
+  const location = useLocation(); 
   return (
     <ul className='categories_container'>
       {categories.map((category) => (
@@ -17,11 +18,12 @@ const GalleryNavbar = ({ categories, handleClick }) => {
               {category.name}
             </Link>
           ) :  */}
+          {console.log(category.name)}
           <NavLink
-            to={`${category.name}`}
+            end to={`/projects/${category.name}`}
             className='list_item_links'
             style={({ isActive }) => ({
-              textDecoration: isActive ? 'underline' : 'none',
+              textDecoration: isActive || location.pathname.indexOf(`${category.name}`) > -1 ? 'underline' : 'none',
             })}
             onClick={() => handleClick(category.id)}
           >
