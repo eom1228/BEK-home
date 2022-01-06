@@ -71,6 +71,10 @@ $layout-large: 1200px;
   column-count: 1;
   column-fill: balance;
   column-gap: 30px;
+  padding-top: 30px; 
+  &__title {
+    padding-bottom: 20px; 
+  }
   &__card {
     margin-bottom: 1rem;
     // display: inline-flex;
@@ -119,15 +123,34 @@ $layout-large: 1200px;
       }
     }
   }
-  @media (min-width: $layout-smallest) {
-    column-count: 2;
+  @media (min-width: $layout-smallest) and (max-width: $layout-medium) {
+    column-count: 1;
     column-fill: balance;
     column-gap: 0.3em;
+    &__card {
+      column-count: 1;
+    }
   }
-  @media (min-width: $layout-medium) {
+  @media (min-width: $layout-large) {
     column-count: 1;
     column-fill: balance;
     column-gap: 0.5em;
+  }
+  @media (min-width: $layout-medium) and (max-width: $layout-large) {
+    column-count: 1;
+    column-fill: balance;
+    column-gap: 0.5em;
+    &__card {
+      margin-bottom: 1rem;
+      // display: inline-flex;
+      flex-flow: column wrap;
+      column-count: 1;
+    }
+    &__image {
+      & img {
+        height: auto; 
+      }
+    }
   }
 }
 
