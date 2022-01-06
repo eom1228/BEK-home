@@ -35,8 +35,6 @@ import GalleryTest from './components/Gallery/GalleryTest';
 import GalleryElement from './components/Gallery/GalleryElement';
 import Layout from './pages/Layout';
 
-
-
 function App() {
   const [projects, setProjects] = useState([...GalleryItemList]);
   const [categories, setCategories] = useState([
@@ -111,15 +109,14 @@ function App() {
             {/* <Route path='*' element={<Gallery />}> */}
             {/* <Route index element={<GalleryElement categories={categories} />} /> */}
             {/* <Route path='*' element={<Gallery categories={categories} />} /> */}
-           
+
             <Route
               path='/projects/Branding/*'
               element={<GalleryBrandingList categories={categories} />}
             >
               {/* <Route path=':branding_id' element={<GalleryBrandingItem />} /> */}
-              
             </Route>
-           
+
             <Route path='Marketing/*' element={<GalleryMarketingList />} />
             <Route path='Design' element={<GalleryDesignList />} />
             <Route path='Photography' element={<GalleryPhotographyList />} />
@@ -127,24 +124,54 @@ function App() {
             {/* </Route> */}
           </Route>
           <Route
-              path='/projects/Branding/:id'
-              element={<GalleryBrandingItem handleClick={handleClick} projects={projects} categories={categories} />}
-            />
+            path='/projects/Branding/:id'
+            element={
+              <GalleryBrandingItem
+                handleClick={handleClick}
+                projects={projects}
+                categories={categories}
+              />
+            }
+          />
           <Route
             path='/projects/Marketing/:id'
-            element={<GalleryMarketingItem handleClick={handleClick} projects={projects} categories={categories} />}
+            element={
+              <GalleryMarketingItem
+                handleClick={handleClick}
+                projects={projects}
+                categories={categories}
+              />
+            }
           />
           <Route
             path='/projects/Design/:id'
-            element={<GalleryDesignItem handleClick={handleClick} projects={projects} categories={categories} />}
+            element={
+              <GalleryDesignItem
+                handleClick={handleClick}
+                projects={projects}
+                categories={categories}
+              />
+            }
           />
           <Route
             path='/projects/Photography/:id'
-            element={<GalleryPhotographyItem handleClick={handleClick} projects={projects} categories={categories} />}
+            element={
+              <GalleryPhotographyItem
+                handleClick={handleClick}
+                projects={projects}
+                categories={categories}
+              />
+            }
           />
           <Route
             path='/projects/Development/:id'
-            element={<GalleryDevelopmentItem handleClick={handleClick} projects={projects} categories={categories} />}
+            element={
+              <GalleryDevelopmentItem
+                handleClick={handleClick}
+                projects={projects}
+                categories={categories}
+              />
+            }
           />
           {/* <Route
           path='/projects'
