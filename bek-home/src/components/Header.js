@@ -13,7 +13,7 @@ const Header = ({ location, history, handleClick, categories }) => {
 
   return (
     <>
-      <header className='header'>
+      <header className='header fixed-top'>
         <div className='header_wrapper'>
           <div className='header_logo'>
             <Link to='/' className='header_logo_link'>
@@ -52,14 +52,14 @@ const Header = ({ location, history, handleClick, categories }) => {
           </div>
         </div>
       </header>
-      {isShown ? (
+      {/* {isShown ? (
         <SubHeader isShown={isShown} setIsShown={setIsShown} />
       ) : (
         <div
           className='empty_container'
           style={{ height: '40px', width: '100%' }}
         ></div>
-      )}
+      )} */}
     </>
   );
 };
