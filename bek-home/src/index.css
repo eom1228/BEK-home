@@ -1,9 +1,14 @@
+
+.bg-color{
+  background-color:#000;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: black;
+  background: black !important;
   box-sizing: border-box;
 }
 

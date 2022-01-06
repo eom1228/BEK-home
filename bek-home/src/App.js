@@ -36,6 +36,7 @@ import GalleryElement from './components/Gallery/GalleryElement';
 import Layout from './pages/Layout';
 
 
+
 function App() {
   const [projects, setProjects] = useState([...GalleryItemList]);
   const [categories, setCategories] = useState([
@@ -89,7 +90,6 @@ function App() {
   };
   return (
     <>
-      {/* <Header handleClick={handleClick} categories={categories} /> */}
       <Routes>
         <Route
           path='/'

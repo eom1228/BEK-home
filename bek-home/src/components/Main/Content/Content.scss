@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/bootstrap";
+
+body{
+    // background-color:#000 !important;
+}
+
+.body-wrapper{
+    padding: 1.5rem;
+}
+
+
+    .standard-space{
+    margin-bottom:1.5rem;
+}
+
+
+.content{
+    &-link{
+        color:#fff;
+        text-decoration:none;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+}
+
+.background-shade {
+    position: relative;
+    & > *{
+        z-index: 1;
+    }
+    &::after{
+        content:'';
+    position:absolute;
+    top:-1.5rem;
+    left:-6rem;
+    background-color:#121212;
+    width:calc(100% + 12rem);
+    height:100%;
+    }
+}
+  
