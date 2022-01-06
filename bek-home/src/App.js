@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
@@ -9,12 +11,12 @@ import Marketing from './components/AboutPage/marketing';
 import Media from './components/AboutPage/media';
 import Photography from './components/AboutPage/photography';
 import Development from './components/AboutPage/development';
-import Header from './components/Header';
-import Footer from './components/Footer';
+
 
 function App() {
   return (
     <>
+    
       <Header />
       <Routes>
         <Route path='/' element={<LandingPage />} />

@@ -7,7 +7,7 @@ import './App.css';
 import {image1} from './images/sample.jpeg';
 
 ReactDOM.render(
-  <Router>
+  <Router class="bg-color">
     <App />
   </Router>,
   document.getElementById('root')
