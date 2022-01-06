@@ -67,7 +67,7 @@ function Gallery({ handleClick, categories, projectsy }) {
   // };
 
   return (
-    <div class='container' style={{marginTop: '50px'}}>
+    <div class='container'>
       <GalleryNavbar
         categories={categories}
         projects={projects}
