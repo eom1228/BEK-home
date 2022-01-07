@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import aos from 'aos';
+import 'aos/dist/aos.css';
 import {
   Link,
   Routes,
@@ -25,10 +27,9 @@ import GalleryTest from './GalleryTest';
 
 const GalleryElement = ({ categories, projects }) => {
   const location = useLocation();
-  // const [projectClicked, setProjectClicked] = useState(false);
-  // const handleClickBrand = () => {
-  //   setProjectClicked(true);
-  // };
+  useEffect(() => {
+    aos.init({ duration: 1000 });
+    },[]);
   return (
     <>
       <div className='gallery'>
@@ -36,11 +37,9 @@ const GalleryElement = ({ categories, projects }) => {
 
         {location.pathname === '/projects' &&
           projects.map((item, index) => (
-            // {
-
-            <div className='gallery__card' key={index}>
-              <Link to={`${item.link}/${item.id}`} className='gallery__link'>
-                <div className='gallery__link--image'>
+            <div className='gallery__card' key={index} >
+              <Link to={`${item.link}/${item.id}`} className='gallery__link' data-aos="fade-up">
+                <div className='gallery__link--image' >
                   <div className='overlay'></div>
                   <img src={item.imageURL[0]} alt='Gallery' />
                 </div>

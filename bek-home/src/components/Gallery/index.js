@@ -16,6 +16,7 @@ import '.';
 
 function Gallery({ handleClick, categories, projectsy }) {
   const [projects, setProjects] = useState([...GalleryItemList]);
+  
   // const [categories, setCategories] = useState([
   //   {
   //     id: 1,

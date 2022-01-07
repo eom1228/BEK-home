@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Slider from '../components/Main/Slider/Slider';
 import Content from '../components/Main/Content/Content';
-// import './LandingPage.scss';
+import './LandingPage.scss';
 
 const LandingPage = () => {
   
@@ -11,7 +11,6 @@ const LandingPage = () => {
     <>
     <Slider/>
     <Content/>
-      <div>LandingPage</div>
     </>
   );
 };
