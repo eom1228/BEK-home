@@ -34,36 +34,48 @@ import GalleryDevelopmentItem from './components/Gallery/GalleryDevelopmentItem'
 import GalleryTest from './components/Gallery/GalleryTest';
 import GalleryElement from './components/Gallery/GalleryElement';
 import Layout from './pages/Layout';
+import AboutPage2 from './pages/AboutPage2';
 
 function App() {
   const [projects, setProjects] = useState([...GalleryItemList]);
+  // const [projects, setProjects] = useState({
+  //   name: 'All',
+  //   clicked: false,
+  //   projects: [...GalleryItemList]
+  // })
   const [categories, setCategories] = useState([
     {
       id: 1,
+      name: 'All',
+      clicked: false,
+      projects: [...GalleryItemList],
+    },
+    {
+      id: 2,
       name: 'Branding',
       clicked: false,
       projects: [...GalleryItems],
     },
     {
-      id: 2,
+      id: 3,
       name: 'Marketing',
       clicked: false,
       projects: [...GalleryItemsTwo],
     },
     {
-      id: 3,
+      id: 4,
       name: 'Design',
       clicked: false,
       projects: [...GalleryItemsThree],
     },
     {
-      id: 4,
+      id: 5,
       name: 'Photography',
       clicked: false,
       projects: [...GalleryItemsFour],
     },
     {
-      id: 5,
+      id: 6,
       name: 'Development',
       clicked: false,
       projects: [...GalleryItemsFive],
@@ -201,6 +213,7 @@ function App() {
           />
           {/* </Route> */}
           <Route path='about' element={<AboutPage />}></Route>
+          <Route path='about2' element={<AboutPage2 />}></Route>
           <Route path='contact' element={<ContactPage />} />
           <Route path='notfound' element={<NotFoundPage />} />
           <Route path='*' element={<NotFoundPage />} />

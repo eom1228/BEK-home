@@ -5,13 +5,13 @@ import GalleryNavbar from './GalleryNavbar';
 const GalleryBrandingItem = ({ categories, handleClick }) => {
   let { id } = useParams();
 
-  const matchedItem = categories[0].projects.find(
+  const matchedItem = categories[1].projects.find(
     (project) => String(project.id) === id
   );
 
   console.log(matchedItem);
   console.log(
-    categories[0].projects.find((project) => String(project.id) === id)
+    categories[1].projects.find((project) => String(project.id) === id)
   );
 
   return (
