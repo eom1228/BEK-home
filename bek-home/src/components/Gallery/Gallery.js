@@ -9,6 +9,8 @@ import branding_nexton_bts from '../../images/nexton_bts.png';
 import marketing_ferrari from '../../images/marketing_ferrari.png';
 import marketing_blackpink_blink from '../../images/blackpink_blink.png';
 import marketing_vw from '../../images/VW.png';
+import design_mont_st_clair from '../../images/design_mont_st.clair.png';
+import design_mont_st_clair2 from '../../images/design_mont_st.clair2.png';
 
 export const GalleryItems = [
   {
@@ -76,7 +78,7 @@ export const GalleryItemsThree = [
   {
     id: 1,
     title: 'Sample7',
-    imageURL: [image2],
+    imageURL: [design_mont_st_clair, design_mont_st_clair2],
     link: '/projects/Design',
     clicked: false,
   },

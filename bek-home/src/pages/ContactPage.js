@@ -31,9 +31,7 @@ const ContactPage = () => {
                       구체적인 의뢰 내용과 일정, 버젯 등을 보내주세요. 검토 후
                       회신 드리겠습니다.
                     </p>
-                    <p className='grid_item_address'>
-                      studiofnt(at)gmail(dot)com
-                    </p>
+                    <p className='grid_item_address'>bekstudio77@gmail.com</p>
                   </div>
                 </Grid>
                 <Grid
@@ -54,9 +52,7 @@ const ContactPage = () => {
                       인턴지원 관련 문의 메일에는 회신을 드리지 못하는 점 양해
                       부탁드립니다.
                     </p>
-                    <p className='grid_item_address'>
-                      recruit.fnt(at)gmail(dot)com
-                    </p>
+                    <p className='grid_item_address'>bekstudio77@gmail.com</p>
                   </div>
                 </Grid>
                 <Grid
@@ -77,8 +73,7 @@ const ContactPage = () => {
                       모든 우편물은 아래의 주소로 보내주세요.{' '}
                     </p>
                     <p className='grid_item_address'>
-                      2F, TOTO Building, 187, Yulgok-ro, Jongno-gu Seoul, 03081,
-                      South Korea ︎ Google map
+                      49, Achasan-ro 17-gil, Seongdong-gu Seoul
                     </p>
                   </div>
                 </Grid>
