@@ -7,7 +7,7 @@ const Footer = () => {
       <div className='footer_container'>
         <div className='footer_content_padding'>
           <div className='footer_content'>
-            © 2019 studio fnt. All rights reserved.
+            © 2022 BEK Studio All rights reserved.
           </div>
         </div>
       </div>

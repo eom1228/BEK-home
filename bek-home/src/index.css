@@ -1,9 +1,14 @@
+
+.bg-color{
+  background-color:#000;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: black;
+  background: black !important;
   box-sizing: border-box;
 }
 
@@ -26,6 +31,10 @@ h1 {
   line-height: 1;
 }
 
+h3 {
+  font-weight: 400;
+  /* font-style: normal; */
+}
 p {
   /* padding: 1.5rem; */
   font-size: 1.2rem;
