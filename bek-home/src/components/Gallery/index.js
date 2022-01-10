@@ -68,6 +68,8 @@ function Gallery({ handleClick, categories, projectsy }) {
   // };
 
   return (
+    <>
+    <section className="spareSpace"></section>
     <div class='container'>
       <GalleryNavbar
         categories={categories}
@@ -77,6 +79,7 @@ function Gallery({ handleClick, categories, projectsy }) {
       {/* <Outlet /> */}
       <GalleryElement categories={categories} projects={projects} />
     </div>
+    </>
   );
 }
 

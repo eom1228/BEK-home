@@ -5,6 +5,7 @@ import './ContactPage.scss';
 const ContactPage = () => {
   return (
     <>
+    <section className="spareSpace"></section>
       <section className='contact_Container'>
         <div className='contact_padding'>
           {/* <div className='contact_heading'>
