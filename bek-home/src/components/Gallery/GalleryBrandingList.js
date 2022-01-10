@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const GalleryBrandingList = ({ project }) => {
   return (
     <>
+    {/* <section className="spareSpace"></section> */}
       <div className='gallery__card'>
         <Link to={`${project.link}/${project.id}`} className='gallery__link'>
           <div className='gallery__link--image'>

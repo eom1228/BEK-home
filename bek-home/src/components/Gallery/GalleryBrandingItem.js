@@ -16,12 +16,15 @@ const GalleryBrandingItem = ({ categories, handleClick }) => {
 
   return (
     <>
+     <section className="spareSpace"></section>
       {matchedItem ? (
         <>
+        
           <div class='container'>
             <GalleryNavbar categories={categories} handleClick={handleClick} />
             <div className='galleryItem'>
               <div className='galleryItem__title' style={{ width: '100%' }}>
+                
                 <h2>{matchedItem.title}</h2>
               </div>
               <div className='galleryItem__description'>

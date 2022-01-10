@@ -16,6 +16,7 @@ const GalleryMarketingItem = ({ categories, handleClick }) => {
 
   return (
     <>
+     <section className="spareSpace"></section>
       {matchedItem ? (
         // <div class='container' style={{ marginTop: '50px' }}>
         //   <GalleryNavbar categories={categories} handleClick={handleClick} />
@@ -34,6 +35,7 @@ const GalleryMarketingItem = ({ categories, handleClick }) => {
         //   </div>
         // </div>
         <div class='container'>
+          
           <GalleryNavbar categories={categories} handleClick={handleClick} />
           <div className='galleryItem'>
             <div className='galleryItem__title' style={{ width: '100%' }}>

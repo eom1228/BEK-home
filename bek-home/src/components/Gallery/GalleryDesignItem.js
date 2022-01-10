@@ -16,8 +16,11 @@ const GalleryDesignItem = ({ categories, handleClick }) => {
 
   return (
     <>
+    
       {matchedItem ? (
+        
         <div class='container' style={{ marginTop: '50px' }}>
+         
           <GalleryNavbar categories={categories} handleClick={handleClick} />
           <div className='galleryItem__card'>
             {/* <Outlet /> */}
