@@ -17,9 +17,11 @@ const GalleryDesignItem = ({ categories, handleClick }) => {
   return (
     <>
       {matchedItem ? (
-        <div class='container' style={{ marginTop: '50px' }}>
-          <GalleryNavbar categories={categories} handleClick={handleClick} />
-          {/* <div className='galleryItem__card'>
+        <>
+          <section className='spareSpace'></section>
+          <div class='container'>
+            <GalleryNavbar categories={categories} handleClick={handleClick} />
+            {/* <div className='galleryItem__card'>
             
             <div className='galleryItem__title'>
               <h2>{matchedItem.title}</h2>
@@ -33,35 +35,36 @@ const GalleryDesignItem = ({ categories, handleClick }) => {
             </div>
           </div> */}
 
-          <div className='galleryItem'>
-            <div className='galleryItem__title' style={{ width: '100%' }}>
-              <h2>{matchedItem.title}</h2>
-            </div>
-            <div className='galleryItem__description'>
-              <p>{matchedItem.description}</p>
-            </div>
-            <div className='galleryItem__card'>
-              {/* <Outlet /> */}
-
-              <div
-                className='galleryItem__image'
-                style={{ columnCount: '1', width: '100%' }}
-              >
-                <div className='overlay'></div>
-                <img src={matchedItem.imageURL[0]} alt='GalleryItem' />
-                {/* <img src={matchedItem.imageURL[1]} alt='GalleryItem' /> */}
+            <div className='galleryItem'>
+              <div className='galleryItem__title' style={{ width: '100%' }}>
+                <h2>{matchedItem.title}</h2>
               </div>
-              <div
-                className='galleryItem__image'
-                style={{ columnCount: '1', width: '100%' }}
-              >
-                <div className='overlay'></div>
+              <div className='galleryItem__description'>
+                <p>{matchedItem.description}</p>
+              </div>
+              <div className='galleryItem__card'>
+                {/* <Outlet /> */}
 
-                <img src={matchedItem.imageURL[1]} alt='GalleryItem' />
+                <div
+                  className='galleryItem__image'
+                  style={{ columnCount: '1', width: '100%' }}
+                >
+                  <div className='overlay'></div>
+                  <img src={matchedItem.imageURL[0]} alt='GalleryItem' />
+                  {/* <img src={matchedItem.imageURL[1]} alt='GalleryItem' /> */}
+                </div>
+                <div
+                  className='galleryItem__image'
+                  style={{ columnCount: '1', width: '100%' }}
+                >
+                  <div className='overlay'></div>
+
+                  <img src={matchedItem.imageURL[1]} alt='GalleryItem' />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       ) : (
         <div>Loading...</div>
       )}

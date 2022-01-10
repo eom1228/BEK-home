@@ -18,6 +18,7 @@ const GalleryBrandingItem = ({ categories, handleClick }) => {
     <>
       {matchedItem ? (
         <>
+          <section className='spareSpace'></section>
           <div class='container'>
             <GalleryNavbar categories={categories} handleClick={handleClick} />
             <div className='galleryItem'>

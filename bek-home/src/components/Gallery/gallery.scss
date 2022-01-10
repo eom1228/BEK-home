@@ -71,9 +71,8 @@ $layout-large: 1200px;
   column-count: 1;
   column-fill: balance;
   column-gap: 30px;
-  padding-top: 30px; 
   &__title {
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
   }
   &__card {
     margin-bottom: 1rem;
@@ -148,7 +147,7 @@ $layout-large: 1200px;
     }
     &__image {
       & img {
-        height: auto; 
+        height: auto;
       }
     }
   }
