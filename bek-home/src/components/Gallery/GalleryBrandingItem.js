@@ -5,13 +5,13 @@ import GalleryNavbar from './GalleryNavbar';
 const GalleryBrandingItem = ({ categories, handleClick }) => {
   let { id } = useParams();
 
-  const matchedItem = categories[0].projects.find(
+  const matchedItem = categories[1].projects.find(
     (project) => String(project.id) === id
   );
 
   console.log(matchedItem);
   console.log(
-    categories[0].projects.find((project) => String(project.id) === id)
+    categories[1].projects.find((project) => String(project.id) === id)
   );
 
   return (
@@ -19,7 +19,11 @@ const GalleryBrandingItem = ({ categories, handleClick }) => {
      <section className="spareSpace"></section>
       {matchedItem ? (
         <>
+<<<<<<< HEAD
         
+=======
+          <section className='spareSpace'></section>
+>>>>>>> b0fe71a8618683fc9d2b05dc24991db274bc252c
           <div class='container'>
             <GalleryNavbar categories={categories} handleClick={handleClick} />
             <div className='galleryItem'>
