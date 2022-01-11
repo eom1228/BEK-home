@@ -18,21 +18,12 @@ const GalleryDesignItem = ({ categories, handleClick }) => {
     <>
     
       {matchedItem ? (
-<<<<<<< HEAD
-        
-        <div class='container' style={{ marginTop: '50px' }}>
-         
-          <GalleryNavbar categories={categories} handleClick={handleClick} />
-          <div className='galleryItem__card'>
-            {/* <Outlet /> */}
-=======
         <>
           <section className='spareSpace'></section>
           <div class='container'>
             <GalleryNavbar categories={categories} handleClick={handleClick} />
             {/* <div className='galleryItem__card'>
             
->>>>>>> b0fe71a8618683fc9d2b05dc24991db274bc252c
             <div className='galleryItem__title'>
               <h2>{matchedItem.title}</h2>
             </div>
