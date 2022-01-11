@@ -13,6 +13,7 @@ const ProjectsPage = ({ handleClick, categories, projects }) => {
   return (
     <>
       {/* <GalleryNavbar /> */}
+      <section className="spareSpace"></section>
       <Gallery projectsy={projects} handleClick={handleClick} categories={categories}></Gallery>
       {/* <Routes>
         <Route

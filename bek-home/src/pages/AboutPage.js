@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import './AboutPage.scss';
 import sampleImg from '../images/fnt_sampleImg.jpeg';
 
-const AboutPage = () => {
+const AboutPage   = () =>  {
   return (
     <>
     <section className="spareSpace"></section>

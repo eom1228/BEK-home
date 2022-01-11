@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const GalleryDevelopmentList = ({ project }) => {
   return (
+    <>
+    
     <div className='gallery__card'>
       <Link to={`${project.link}/${project.id}`} className='gallery__link'>
         <div className='gallery__link--image'>
@@ -14,6 +16,7 @@ const GalleryDevelopmentList = ({ project }) => {
         </div>
       </Link>
     </div>
+    </>
   );
 };
 

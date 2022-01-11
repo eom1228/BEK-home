@@ -16,6 +16,7 @@ const GalleryDevelopmentItem = ({ categories, handleClick }) => {
 
   return (
     <>
+    
       {matchedItem ? (
         <>
           <section className='spareSpace'></section>
