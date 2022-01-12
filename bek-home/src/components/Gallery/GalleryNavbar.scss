@@ -14,12 +14,13 @@ $layout-large: 1200px;
     .list_item_links {
       display: flex;
       text-decoration: none;
-      color: white;
+      color: #bbbbbb;
       font-size: 16px;
-      border: 1px solid gray;
-      padding: 2px 20px;
-      border-radius: 15px;
-      background: gray;
+      font-weight: 300;
+      border: 1px solid #bbbbbb;
+      padding: 5px 25px;
+      border-radius: 2px;
+      // background: gray;
       &:hover {
         text-decoration: underline;
       }
