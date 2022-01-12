@@ -32,6 +32,14 @@ const GalleryNavbar = ({ categories, handleClick }) => {
                 isActive || location.pathname.indexOf(`${category.name}`) > -1
                   ? 'underline'
                   : 'none',
+              color:
+                isActive || location.pathname.indexOf(`${category.name}`) > -1
+                  ? 'black'
+                  : 'white',
+              background:
+                isActive || location.pathname.indexOf(`${category.name}`) > -1
+                  ? 'white'
+                  : 'gray',
             })}
             onClick={() => handleClick(category.id)}
           >
