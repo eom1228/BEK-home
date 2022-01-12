@@ -1,16 +1,25 @@
+$layout-smallest: 360px;
+$layout-small: 768px;
+$layout-medium: 992px;
+$layout-large: 1200px;
+
 .categories_container {
   display: flex;
   justify-content: flex-start;
   padding: 50px 0;
   .categories_list_item {
     display: flex;
-    margin-right: 40px;
+    margin-right: 5px;
 
     .list_item_links {
       display: flex;
       text-decoration: none;
       color: white;
       font-size: 16px;
+      border: 1px solid gray;
+      padding: 2px 20px;
+      border-radius: 15px;
+      background: gray;
       &:hover {
         text-decoration: underline;
       }
@@ -18,5 +27,11 @@
       //     text-decoration: underline;
       //   }
     }
+  }
+
+  @media (min-width: $layout-smallest) and (max-width: $layout-small) {
+    padding: 50px 0 25px 0;
+    overflow-x: scroll;
+    margin-bottom: 25px;
   }
 }
