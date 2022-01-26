@@ -4,6 +4,7 @@ import './GalleryNavbar.scss';
 
 const GalleryNavbar = ({ categories, handleClick }) => {
   const location = useLocation();
+
   return (
     <ul className='categories_container'>
       {categories.map((category) => (
@@ -27,6 +28,7 @@ const GalleryNavbar = ({ categories, handleClick }) => {
                 : `/projects/${category.name}`
             }
             className='list_item_links'
+            // activeClassName='active'
             style={({ isActive }) => ({
               textDecoration:
                 isActive || location.pathname.indexOf(`${category.name}`) > -1
