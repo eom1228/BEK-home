@@ -21,8 +21,20 @@ $layout-large: 1200px;
       padding: 5px 25px;
       border-radius: 2px;
       // background: gray;
+      // .active {
+
+      // }
       &:hover {
-        text-decoration: underline;
+        text-decoration: underline !important;
+        background: #bbbbbb !important;
+        color: white !important;
+      }
+      .active {
+        &:hover {
+          background: 'white' !important;
+          color: 'black' !important;
+          border: 5px solid red;
+        }
       }
       //   &:active {
       //     text-decoration: underline;
