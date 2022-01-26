@@ -40,7 +40,10 @@ const Header = ({ history, handleClick, categories }) => {
       <header
         className='header fixed-top'
         style={
-          scrollPosition > 500
+          scrollPosition > 500 ||
+          location.pathname === '/projects' ||
+          location.pathname === '/about' ||
+          location.pathname === '/contact'
             ? {
                 background: '#000',
                 borderBottom: '1px solid #fff',

@@ -1,17 +1,9 @@
 import { useState } from 'react';
-import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import ProjectsPage from './pages/ProjectsPage';
-import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
-import Branding from './components/AboutPage/branding';
-import Marketing from './components/AboutPage/marketing';
-import Media from './components/AboutPage/media';
-import Photography from './components/AboutPage/photography';
-import Development from './components/AboutPage/development';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import GalleryBrandingList from './components/Gallery/GalleryBrandingList';
 import GalleryMarketingList from './components/Gallery/GalleryMarketingList';
 import GalleryDesignList from './components/Gallery/GalleryDesignList';
@@ -25,16 +17,14 @@ import {
   GalleryItemsFour,
   GalleryItemsFive,
 } from '../src/components/Gallery/Gallery';
-import Gallery from '../src/components/Gallery/index';
 import GalleryBrandingItem from './components/Gallery/GalleryBrandingItem';
 import GalleryDesignItem from './components/Gallery/GalleryDesignItem';
 import GalleryMarketingItem from './components/Gallery/GalleryMarketingItem';
 import GalleryPhotographyItem from './components/Gallery/GalleryPhotographyItem';
 import GalleryDevelopmentItem from './components/Gallery/GalleryDevelopmentItem';
-import GalleryTest from './components/Gallery/GalleryTest';
-import GalleryElement from './components/Gallery/GalleryElement';
 import Layout from './pages/Layout';
-import AboutPage2 from './pages/AboutPage2';
+import AboutPage3 from './pages/AboutPage3';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   const [projects, setProjects] = useState([...GalleryItemList]);
@@ -82,8 +72,6 @@ function App() {
     },
   ]);
 
-  const location = useLocation();
-
   const handleClick = (id, value) => {
     setCategories(
       categories.map((category) => {
@@ -118,22 +106,15 @@ function App() {
               <ProjectsPage handleClick={handleClick} categories={categories} />
             }
           >
-            {/* <Route path='*' element={<Gallery />}> */}
-            {/* <Route index element={<GalleryElement categories={categories} />} /> */}
-            {/* <Route path='*' element={<Gallery categories={categories} />} /> */}
-
             <Route
               path='/projects/Branding/*'
               element={<GalleryBrandingList categories={categories} />}
-            >
-              {/* <Route path=':branding_id' element={<GalleryBrandingItem />} /> */}
-            </Route>
+            ></Route>
 
             <Route path='Marketing/*' element={<GalleryMarketingList />} />
             <Route path='Design' element={<GalleryDesignList />} />
             <Route path='Photography' element={<GalleryPhotographyList />} />
             <Route path='Development' element={<GalleryDevelopmentList />} />
-            {/* </Route> */}
           </Route>
           <Route
             path='/projects/Branding/:id'
@@ -185,41 +166,13 @@ function App() {
               />
             }
           />
-          {/* <Route
-          path='/projects'
-          element={
-            <ProjectsPage handleClick={handleClick} categories={categories} />
-          }
-        >
-          
-          <Route
-            path='/projects/Design/*'
-            element={<GalleryBrandingList categories={categories} />}
-          >
-             
-          </Route>
-          <Route
-            path='/projects/Marketing'
-            element={<GalleryMarketingList />}
-          />
-          <Route path='/projects/Design' element={<GalleryDesignList />} />
-          <Route
-            path='/projects/Photography'
-            element={<GalleryPhotographyList />}
-          />
-          <Route
-            path='/projects/Development'
-            element={<GalleryDevelopmentList />}
-          />
-          {/* </Route> */}
+          <Route path='about3' element={<AboutPage3 />}></Route>
           <Route path='about' element={<AboutPage />}></Route>
-          <Route path='about2' element={<AboutPage2 />}></Route>
           <Route path='contact' element={<ContactPage />} />
           <Route path='notfound' element={<NotFoundPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Route>
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 }

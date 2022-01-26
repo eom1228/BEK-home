@@ -6,11 +6,10 @@ import Content from '../components/Main/Content/Content';
 import './LandingPage.scss';
 
 const LandingPage = () => {
-  
   return (
     <>
-    <Slider/>
-    <Content/>
+      <Slider />
+      <Content />
     </>
   );
 };
