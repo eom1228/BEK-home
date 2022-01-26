@@ -1,68 +1,43 @@
-
-.page_Container {
-  min-height: 100vh;
-  position: relative;
-  width: 100%;
-  display: flex;
-  .page_padding {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 3rem 0 0 0;
-    .page_heading {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      .page_header {
-        display: flex;
-      }
+$layout-medium: 1000px;
+$layout-small: 768px;
+.spareSpace {
+  padding-top: 96px;
+  background-color: #000;
+}
+.about-section {
+  .about-intro {
+    padding-top: 150px;
+    .about-intro-description {
+      margin-bottom: 30px;
+      font-weight: 400;
     }
-    .page_main_section,
-    .page_sub_section {
-      display: flex;
-      flex-direction: initial;
-      width: 100%;
-      //   margin: 3rem 0;
-      border-bottom: 1px solid gray;
-      //   align-items: center;
-      //   justify-content: center;
-      .page_main_padding,
-      .page_sub_padding {
-        display: flex;
-        width: 100%;
-        padding: 80px;
-        .main_grids,
-        .sub_grids {
-          display: flex;
-          justify-content: center;
-          .main_grid_item,
-          .sub_grid_item {
-            // p {
-            //   padding: 1.5rem;
-            //   font-size: 1.4rem;
-            //   font-weight: 400;
-            //   font-style: normal;
-            // }
-            line-height: 1.3;
-            flex: 1;
-            .main_item_photoBox {
-              width: 100%;
-              height: auto;
-              text-align: center;
-              img {
-                background-image: url(../images/fnt_sampleImg.jpeg);
-                width: 80%;
-                height: auto;
-              }
-            }
+  }
+  .about-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .about-body-content {
+    }
+    .about-body-content1 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .body-content1-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        @media (min-width: $layout-small) and (max-width: $layout-medium) {
+          & {
+            grid-template-columns: repeat(2, 1fr);
           }
+        }
+        @media (max-width: $layout-small) {
+          & {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+        .body-content-column-items {
+          padding-top: 20px;
         }
       }
     }
   }
-}
-
-.spareSpace{
-  padding: 30px 0;
-  background-color: #000;
 }

@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 import {
@@ -29,7 +29,7 @@ const GalleryElement = ({ categories, projects }) => {
   const location = useLocation();
   useEffect(() => {
     aos.init({ duration: 1000 });
-    },[]);
+  }, []);
   return (
     <>
       <div className='gallery'>
@@ -37,9 +37,13 @@ const GalleryElement = ({ categories, projects }) => {
 
         {location.pathname === '/projects' &&
           projects.map((item, index) => (
-            <div className='gallery__card' key={index} >
-              <Link to={`${item.link}/${item.id}`} className='gallery__link' data-aos="fade-up">
-                <div className='gallery__link--image' >
+            <div className='gallery__card' key={index}>
+              <Link
+                to={`${item.link}/${item.id}`}
+                className='gallery__link'
+                data-aos='fade-up'
+              >
+                <div className='gallery__link--image'>
                   <div className='overlay'></div>
                   <img src={item.imageURL[0]} alt='Gallery' />
                 </div>
@@ -50,9 +54,9 @@ const GalleryElement = ({ categories, projects }) => {
             </div>
           ))}
 
-        {categories[0].clicked &&
+        {categories[1].clicked &&
           // !projectClicked &&
-          categories[0].projects.map((project, index) => (
+          categories[1].projects.map((project, index) => (
             <GalleryBrandingList
               categories={categories}
               project={project}
@@ -83,8 +87,8 @@ const GalleryElement = ({ categories, projects }) => {
             //filter 해야지
           ))} */}
         {/* {categories[0].clicked && categories[0].projects} */}
-        {categories[1].clicked &&
-          categories[1].projects.map((project, index) => (
+        {categories[2].clicked &&
+          categories[2].projects.map((project, index) => (
             <GalleryMarketingList project={project} key={project.id} />
 
             // <div class='gallery__card'>
@@ -100,8 +104,8 @@ const GalleryElement = ({ categories, projects }) => {
             // </div>
           ))}
 
-        {categories[2].clicked &&
-          categories[2].projects.map((project, index) => (
+        {categories[3].clicked &&
+          categories[3].projects.map((project, index) => (
             <GalleryDesignList project={project} key={project.id} />
             // <div class='gallery__card'>
             //   <Link to='{project.link}' class='gallery__link'>
@@ -115,13 +119,13 @@ const GalleryElement = ({ categories, projects }) => {
             //   </Link>
             // </div>
           ))}
-        {categories[3].clicked &&
-          categories[3].projects.map((project, index) => (
+        {categories[4].clicked &&
+          categories[4].projects.map((project, index) => (
             <GalleryPhotographyList project={project} key={project.id} />
           ))}
 
-        {categories[4].clicked &&
-          categories[4].projects.map((project, index) => (
+        {categories[5].clicked &&
+          categories[5].projects.map((project, index) => (
             <GalleryDevelopmentList project={project} key={project.id} />
           ))}
       </div>

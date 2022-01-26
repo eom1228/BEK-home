@@ -69,7 +69,7 @@ function Gallery({ handleClick, categories, projectsy }) {
 
   return (
     <>
-    <section className="spareSpace"></section>
+    {/* <section className="spareSpace"></section> */}
     <div class='container'>
       <GalleryNavbar
         categories={categories}
