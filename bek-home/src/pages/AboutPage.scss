@@ -20,24 +20,83 @@ $layout-small: 768px;
     .about-body-content1 {
       padding-top: 30px;
       padding-bottom: 30px;
-      .body-content1-columns {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 20px;
+
+      .gallery {
+        column-count: 4;
+        column-fill: balance;
+
+        &__card {
+          margin-bottom: 1rem;
+        }
+
+        &__cardContainer {
+          display: inline-flex;
+          flex-flow: column wrap;
+          position: relative;
+          width: 100%;
+          margin-bottom: 1em;
+          text-decoration: none;
+          transition: 1000ms ease-in-out;
+          &--image {
+            position: relative;
+            // height: 10rem;
+            margin-bottom: 1em;
+            & .overlay {
+              background: rgba(0, 0, 0, 0.3);
+
+              height: auto;
+              width: 100%;
+              visibility: hidden;
+            }
+            & img {
+              width: 100%;
+              height: auto;
+
+              object-fit: cover;
+              background-color: rgba(255, 255, 255, 0.2);
+              vertical-align: middle;
+            }
+          }
+          &--title,
+          &--contents {
+            z-index: 10;
+          }
+        }
         @media (min-width: $layout-small) and (max-width: $layout-medium) {
           & {
-            grid-template-columns: repeat(2, 1fr);
+            column-count: 2;
+            column-fill: balance;
+            column-gap: 0.3em;
           }
         }
+
         @media (max-width: $layout-small) {
           & {
-            grid-template-columns: repeat(1, 1fr);
+            column-count: 1;
+            column-fill: balance;
+            column-gap: 0.3em;
           }
         }
-        .body-content-column-items {
-          padding-top: 20px;
-        }
       }
+
+      // .body-content1-columns {
+      //   display: grid;
+      //   grid-template-columns: repeat(4, 1fr);
+      //   column-gap: 20px;
+      //   @media (min-width: $layout-small) and (max-width: $layout-medium) {
+      //     & {
+      //       grid-template-columns: repeat(2, 1fr);
+      //     }
+      //   }
+      //   @media (max-width: $layout-small) {
+      //     & {
+      //       grid-template-columns: repeat(1, 1fr);
+      //     }
+      //   }
+      //   .body-content-column-items {
+      //     padding-top: 20px;
+      //   }
+      // }
     }
   }
 }

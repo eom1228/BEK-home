@@ -1,10 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import aos from 'aos';
+
+import image from '../images/fnt_sampleImg.jpeg';
+import image1 from '../images/sample.jpeg';
+import image2 from '../images/sample1.jpeg';
+import image3 from '../images/sample2.jpeg';
+import 'aos/dist/aos.css';
 import './AboutPage.scss';
 
 const AboutPage = () => {
+  const [services, setServices] = useState([
+    {
+      id: 1,
+      name: 'Branding',
+      content: 'brand strategy consulting',
+      contentTwo: 'corporate / brand identity design',
+      imageURL: [image],
+    },
+    {
+      id: 2,
+      name: 'Social Media',
+      content: 'social media campaign & marketing',
+      contentTwo: '',
+      imageURL: [image1],
+    },
+    {
+      id: 3,
+      name: 'Digital Media',
+      content: 'prototype design',
+      contentTwo: 'digital platform planning / UI/UX design / dev',
+      imageURL: [image2],
+    },
+    {
+      id: 4,
+      name: 'Film/Video',
+      content: 'film / video production & design',
+      contentTwo: 'corporate / brand identity design',
+      imageURL: [image3],
+    },
+  ]);
+
+  useEffect(() => {
+    aos.init({ duration: 1000 });
+  }, []);
   return (
     <>
       {/* <section className='spareSpace' /> */}
+
       <div className='container'>
         <section className='about-section'>
           <article className='about-intro'>
@@ -26,68 +68,27 @@ const AboutPage = () => {
               <ul className='about-body-content-list'></ul>
             </div>
             <div className='about-body-content1'>
-              <div className='body-content1-columns'>
-                <div className='body-content1-column1'>
-                  <div className='body-content-column-items'>
-                    <p style={{ fontWeight: '400' }}>Branding</p>
-                    <p>
-                      brand strategy consulting
-                      <br></br>
-                      corporate / brand identity design
-                    </p>
+              <div className='gallery'>
+                {/* <div class='gallery__card'> */}
+                {services.map((item, index) => (
+                  <div className='gallery__card' key={index}>
+                    <div className='gallery__cardContainer' data-aos='fade-up'>
+                      <div className='gallery__cardContainer--image'>
+                        <div className='overlay'></div>
+                        <img src={item.imageURL[0]} alt='Gallery' />
+                      </div>
+                      <div className='gallery__cardContainer--title'>
+                        <p>{item.name}</p>
+                      </div>
+                      <div className='gallery__cardContainer--contents'>
+                        <span>{item.content}</span>
+                        <br></br>
+                        <span>{item.contentTwo}</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className='body-content-column-items'>
-                    <p style={{ fontWeight: '400' }}>Film/Video</p>
-                    <p>
-                      film / video production &amp; design
-                      <br></br>
-                      corporate / brand identity design
-                    </p>
-                  </div>
-                </div>
-
-                <div className='body-content1-column2'>
-                  <div className='body-content-column-items'>
-                    <p style={{ fontWeight: '400' }}>Social Media</p>
-                    <p>
-                      social media campaign &amp; marketing
-                      <br></br>
-                    </p>
-                  </div>
-                  {/* <div
-                  className='body-content1-column2-item2'
-                  style={{ paddingTop: '20px' }}
-                >
-                  <p>Film/Video</p>
-                  <p>
-                    film / video production design
-                    <br></br>
-                    corporate / brand identity design
-                  </p>
-                </div> */}
-                </div>
-
-                <div className='body-content1-column3'>
-                  <div className='body-content-column-items'>
-                    <p style={{ fontWeight: '400' }}>Digital Media</p>
-                    <p>
-                      prototype design
-                      <br></br>
-                      digital platform planning / UI/UX design / dev
-                    </p>
-                  </div>
-                  {/* <div
-                  className='body-content1-column3-item2'
-                  style={{ paddingTop: '20px' }}
-                >
-                  <p>Film/Video</p>
-                  <p>
-                    film / video production design
-                    <br></br>
-                    corporate / brand identity design
-                  </p>
-                </div> */}
-                </div>
+                ))}
+                {/* </div> */}
               </div>
             </div>
             <div className='about-body-content2'></div>
