@@ -41,6 +41,7 @@ const Header = ({ history, handleClick, categories }) => {
         className='header fixed-top'
         style={
           scrollPosition > 500 ||
+          window.location.href.indexOf('projects') > -1 ||
           location.pathname === '/projects' ||
           location.pathname === '/about' ||
           location.pathname === '/contact'
